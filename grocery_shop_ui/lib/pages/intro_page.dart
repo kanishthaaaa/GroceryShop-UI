@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery_shop_ui/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget{
   const IntroPage({super.key});
@@ -29,22 +30,25 @@ class IntroPage extends StatelessWidget{
           textAlign: TextAlign.center,
           style:GoogleFonts.poppins(
             fontSize: 18,
-            color: Colors.grey,
+            color: const Color.fromARGB(255, 119, 118, 118),
           ) ,),
-          SizedBox(height: 35,),
-          Container(
-            height: 60,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 27, 122, 245),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Center(
-              child: Text('Get Started',
-              style: GoogleFonts.poppins(
-                fontSize: 20,
-                color: Colors.white,
-              ),),
+          const SizedBox(height: 35,),
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(),)) ,
+            child: Container(
+              height: 60,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 27, 122, 245),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Text('Get Started',
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),),
+              ),
             ),
           ),
           ],
