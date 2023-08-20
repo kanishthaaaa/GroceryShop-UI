@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_shop_ui/components/grocery_item_tile.dart';
 import 'package:grocery_shop_ui/model/cart_model.dart';
+import 'package:grocery_shop_ui/pages/cart_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,7 +13,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: (){},
+      floatingActionButton: FloatingActionButton(onPressed: () => 
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return CartPage();
+      },),),
       backgroundColor: const Color.fromARGB(255, 27, 122, 245),
       child: Icon(Icons.shopping_bag),),
       body: SafeArea(
