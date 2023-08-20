@@ -26,7 +26,7 @@ class GroceryItemTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             //image
-            Image.asset(
+            Image.asset( 
               imagePath,
               height: 80,
             ),
@@ -34,7 +34,7 @@ class GroceryItemTile extends StatelessWidget {
             Text(
               itemName,
               style: GoogleFonts.poppins(
-                fontSize: 30,
+                fontSize: 20,
               ),
             ),
             //price
